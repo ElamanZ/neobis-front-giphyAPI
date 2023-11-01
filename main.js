@@ -1,27 +1,27 @@
 
-const btnSearch = document.getElementById('header__search-btn')
+const btnSearch = document.getElementById('btn-search')
 const inpSearch = document.getElementById('input-search')
+const resultsContainer = document.getElementById('giphy')
 const URL = "https://api.giphy.com/v1/gifs/search?api_key="
-const APIKEY = "Bv3lnQoO2rIGMAXsYMGIpSvPSyTcCS6t"
+const APIKEY = "U531ZZAk6PTU6Z15Hy1H3KWdGijmUYcL"
 
 
-document.addEventListener('DOMContentLoaded', init)
-function init() {
-    btnSearch.addEventListener('click', e => {
-        e.preventDefault()
-        let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`
-        let str = document.getElementById('input-search').value.trim()
-        url = url.concat(str)
-        console.log(url)
-        fetch(url)
-            .then(response => response.json())
-            .then(content => {
-                console.log(content.data)
-                console.log('META', content.meta)
-            })
-            .catch(err => {
-                console.error(err)
-            })
-    })
-}
-init()
+document.addEventListener('DOMContentLoaded', function () {
+    btnSearch.addEventListener('click', async () => {
+        try {
+            const response = await fetch(`${URL}${APIKEY}&q=${inpSearch.value.trim()}&limit=25`);
+            const data = await response.json();
+            console.log('data', data);
+
+            // Очистите предыдущие результаты
+            resultsContainer.innerHTML = '';
+
+            // Обработайте данные и отобразите их на странице
+
+        } catch (e) {
+            console.error(e);
+        }
+    });
+
+
+});
