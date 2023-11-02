@@ -6,7 +6,11 @@
     margin: 0;
     color: #272542;
 }
+header {
+    max-width: 1920px;
+}
 .header__item {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,5 +64,16 @@
 .main__giphy-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    width: 100%;
+}
+
+.main__giphy-content img {
+    width: 580px;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px;
+}
+main {
+    max-width: 1920px;
 }
