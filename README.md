@@ -1,6 +1,6 @@
 # ReadMe для проекта "Giphy API"
 
-##Ссылка: (https://elamanz.github.io/neobis-front-giphyAPI/)
+## Ссылка: (https://elamanz.github.io/neobis-front-giphyAPI/)
 
 ## Описание проекта
 
