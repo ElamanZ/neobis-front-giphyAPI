@@ -62,13 +62,16 @@ header {
     height: 30px;
 }
 .main__giphy-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
+    row-gap: 1rem;
 }
 
 .main__giphy-content img {
+    flex-grow: 1;
+    flex-shrink: 0;
     width: 580px;
     height: 400px;
     object-fit: cover;
